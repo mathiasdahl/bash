@@ -1,16 +1,3 @@
-# Aliases I like to have around
-
-alias rm='rm -i'
-alias ..='cd ..'
-alias ll='ls -l'
-alias lrt='ls -lrt'
-alias lart='ls -lart'
-alias la='ls -la'
-alias ffi='find . -iname'
-alias mkdir='mkdir -pv'
-alias hg='history | grep'
-alias ha='history -a'
-
 cl () {
    DIR="$*"
    if [ $# -lt 1 ]
@@ -24,3 +11,15 @@ mcd () {
    mkdir -p $1
    cd $1
 }
+
+alias rm='rm -i'
+alias ..='cd ..'
+alias ll='ls -l'
+alias lrt='ls -lrt'
+alias lart='ls -lart'
+alias la='ls -la'
+alias ffi='find . -iname'
+alias mkdir='mkdir -pv'
+alias hg='history | grep'
+alias ha='history -a'
+
