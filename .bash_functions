@@ -16,6 +16,14 @@ fxe() {
     find . -type f -iname "*.$1" -print0 | xargs -0 grep -i -E "$2"
 }
 
+gx() {
+    grep -ir --include="*.$1" "$2"
+}
+
+rgx () {
+    rg --smart-case "$2" -g "*.$1"
+}
+
 adal() {
     if [[ -z "$1" || -z "$2"  ]]
     then
