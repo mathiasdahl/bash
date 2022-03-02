@@ -12,6 +12,10 @@ mcd () {
    cd $1
 }
 
+fxe() {
+    find . -type f -iname "*.$1" -print0 | xargs -0 grep -i -E "$2"
+}
+
 adal() {
     if [[ -z "$1" || -z "$2"  ]]
     then
@@ -31,6 +35,8 @@ pp() {
 }
 
 # Modify cd to save a history of directories I visit
+
+CDHF=~/.xd_history
 
 cd() {
     if [[ -z "$1" ]]
