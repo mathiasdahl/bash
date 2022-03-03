@@ -12,12 +12,16 @@ mcd () {
    cd $1
 }
 
+f() {
+    find . -iname "*$1*"
+}
+
 fxe() {
-    find . -type f -iname "*.$1" -print0 | xargs -0 grep -i -E "$2"
+    find . -type f -iname "*.$1" -print0 | xargs -0 grep --color -i -E "$2"
 }
 
 gx() {
-    grep -ir --include="*.$1" "$2"
+    grep --color -ir --include="*.$1" "$2"
 }
 
 rgx () {
@@ -51,7 +55,11 @@ cd() {
     then
         builtin cd
     else
-        builtin cd $1
+        if ! [[ -d "$1" ]]; then
+            builtin cd *$1*
+        else
+            builtin cd $1            
+        fi
     fi
 
     # Trying to have this execute in a sub shell
