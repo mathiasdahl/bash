@@ -1,6 +1,6 @@
 #
 # You can easily install these with this command line:
-#  $ source <(curl -s https://raw.githubusercontent.com/mathiasdahl/bash/main/.bash_aliases)
+#  $ source <(curl -s https://raw.githubusercontent.com/mathiasdahl/bash/master/.bash_aliases)
 #
 
 alias rm='rm -i'
