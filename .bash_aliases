@@ -1,3 +1,5 @@
+# -*- mode: sh;-*-
+
 #
 # You can easily install these with this command line:
 #  $ source <(curl -s https://raw.githubusercontent.com/mathiasdahl/bash/master/.bash_aliases)
