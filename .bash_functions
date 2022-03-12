@@ -1,3 +1,12 @@
+fkill() {
+   pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+   echo $pid
+
+    if test -n "$pid"; then
+       echo $pid | xargs kill -9
+    fi
+}
+
 cl () {
    DIR="$*"
    if [ $# -lt 1 ]
