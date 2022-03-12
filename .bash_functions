@@ -1,3 +1,5 @@
+# -*- mode: sh;-*-
+
 fkill() {
    pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
    echo $pid
